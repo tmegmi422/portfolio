@@ -1,0 +1,222 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/base.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+  <link rel="icon" a href="favicon.ico">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>ご予約｜Sci Tec Resort</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="css/reset.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+<link rel="stylesheet" href="css/slick.css">
+<link rel="stylesheet" href="css/style.css"> 
+  <script src="https://kit.fontawesome.com/a25cb48917.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script> 
+<script>
+ $(function(){
+  $('.bxslider').bxSlider({
+   auto: true, // 自動でスライドショーをスタートさせる　（初期値: false）
+   mode: 'fade', // アニメーションの種類「'horizontal'」「'vertical'」「'fade'」　（初期値: 'horizontal'）
+   speed: 1000, // アニメーションのスピード　（初期値: 500）
+   pause: 5000, // 画像の切り替わる間隔　（初期値: 4000）
+   pager: false, // 下部にある画像切り替えボタンの表示・非表示　（初期値: true）
+   controls: false // 左右の矢印の表示・非表示　（初期値: true）
+  });
+ });
+</script>
+  <script src="js/slick.min.js"></script> 
+  
+  
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+<!-- InstanceParam name="class" type="text" value="book" -->
+</head>
+
+<body class="book">
+<header>
+  <nav>
+    <ul>
+      <li>
+        <h1><a href="index.html"><img src="images/header-logo.png" alt="logo-image"></a></h1>
+      </li>
+      <li><a href="guestroom.html">客室
+        <p>Guest Room</p>
+        </a></li>
+      <li><a href="http://graybison4.sakura.ne.jp/">ダイニング
+        <p>Dining</p>
+        </a></li>
+      <li><a href="wedding.html">ウェディング
+        <p>Wedding</p>
+        </a></li>
+      <li><a href="activity.html">アクティビティ
+        <p>Activity</p>
+        </a></li>
+      <li class="book"><a href="book.html">宿泊予約<br>
+        Book Now</a></li>
+    </ul>
+  </nav>
+</header>
+<!-- InstanceBeginEditable name="メイン領域" -->
+<main>
+  <div class="book-label">
+    <ul>
+      <li class="plan-search">
+        <p>PLAN SEARCH</p>
+        <p>プラン検索・ご予約</p>
+      </li>
+      <li class="booking">チェックイン日<br>
+        <input name="date" type="date"></li>
+      <li class="booking">泊数<br>
+        <input type="number" name="stay" min="1" max="30" value="1"></li>
+      <li>部屋数<br>
+        <input type="number" name="room" min="1" max="10" value="1"></li>
+      <li>人数<br>
+        <input type="number" name="member" min="1" max="5" value="1"></li>
+      <li class="search"><a href="book.html">検索</a></li>
+    </ul>
+  </div>
+  
+  <div class="inner">
+  <div class="plan-box">
+  
+  <h2>＜GoToトラベルキャンペーン割引対象＞Bed and Breakfast 【ご朝食付き】</h2>
+  
+    <article class="stay-plan">
+      
+      <div id="wrap">
+        
+  <ul id="slider">
+    <li class="slide-item"><img src="images/stay-plan-img1.png" alt="宿泊プラン画像1"></li>
+    <li class="slide-item"><img src="images/stay-plan-home2.png" alt="宿泊プラン画像2"></li>
+    <li class="slide-item"><img src="images/stay-plan-home3.png" alt="宿泊プラン画像3"></li>
+  </ul>
+        
+  <ul id="thumbnail-list">
+    <li class="thumbnail-item"><img src="images/thumbnail-1.jpg" alt="宿泊プラン画像1"></li>
+    <li class="thumbnail-item"><img src="images/thumbnail-2.jpg" alt="宿泊プラン画像2"></li>
+    <li class="thumbnail-item"><img src="images/thumbnail-3.jpg" alt="宿泊プラン画像3"></li>
+  </ul>
+      </div>
+<script>
+      $(function(){
+  var slider = "#slider"; // スライダー
+  var thumbnailItem = "#thumbnail-list .thumbnail-item"; // サムネイル画像アイテム
+  
+  // サムネイル画像アイテムに data-index でindex番号を付与
+  $(thumbnailItem).each(function(){
+   var index = $(thumbnailItem).index(this);
+   $(this).attr("data-index",index);
+  });
+  
+  // スライダー初期化後、カレントのサムネイル画像にクラス「thumbnail-current」を付ける
+  // 「slickスライダー作成」の前にこの記述は書いてください。
+  $(slider).on('init',function(slick){
+   var index = $(".slide-item.slick-slide.slick-current").attr("data-slick-index");
+   $(thumbnailItem+'[data-index="'+index+'"]').addClass("thumbnail-current");
+  });
+
+  //slickスライダー初期化  
+  $(slider).slick({
+    autoplay: true,
+    arrows: false,
+    fade: true,
+    speed: 1000, // アニメーションのスピード　（初期値: 500）
+    pause: 4000, // 画像の切り替わる間隔　（初期値: 4000）
+    
+    infinite: false //これはつけましょう。
+  });
+  //サムネイル画像アイテムをクリックしたときにスライダー切り替え
+  $(thumbnailItem).on('click',function(){
+    var index = $(this).attr("data-index");
+    $(slider).slick("slickGoTo",index,false);
+  });
+  
+  //サムネイル画像のカレントを切り替え
+  $(slider).on('beforeChange',function(event,slick, currentSlide,nextSlide){
+    $(thumbnailItem).each(function(){
+      $(this).removeClass("thumbnail-current");
+    });
+    $(thumbnailItem+'[data-index="'+nextSlide+'"]').addClass("thumbnail-current");
+  });
+});
+      </script>
+
+
+      <section>目の前に群青の海を見渡す客室と、サイテクリゾート沖縄ならではのパーソナルなサービスをご堪能ください。<br><br>サイテクリゾート沖縄のご朝食は滞在のスタイルに合わせて幅広い時間帯でご利用いただける「ブランチ」が特徴。オープンエアの心地よいテラス席を有するオールデイダイニング「Sci Tec Terrace」では、午前11時まで朝食をお楽しみいただけます。 <br>
+        <br>【プランに含まれる内容】<br>
+        ○ ご朝食（朝食対応のレストランにてお召し上がりいただけます）<br><br>
+        <hr>
+        期間　　2019/10/01 ～ 2021/06/30<br>
+        お食事　	2食付（夕食・朝食）
+        <hr>
+      </section>
+      <hr>
+    </article>
+    
+    <div class="book-plan">   
+      <div class="book-plan-list"><p>客室</p><p>大人一名</p></div>
+      <hr>
+    <article class="plan-room">
+      <figure><img src="images/book-room-img.png" alt="デラックスオーシャンビュー"></figure>
+      <section>デラックスオーシャンビュー ／ (禁煙)</section>
+      <section>￥15,000～</section>
+      </article>
+      <p class="book-bottom">※表示されている料金は参考価格です。予約内容確認画面で最終的な料金をご確認ください。</p>
+    </div>
+  
+  
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
+  
+  
+  
+  
+</main>
+<!-- InstanceEndEditable -->
+<footer> <a href="index.html"><img src="images/SCI%20TEC%20TERRACE.png" alt="footer-logo"></a>
+  <div class="footer-menu">
+    <div class="menu1">
+      <h3>HOME・予約</h3>
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="book.html">予約</a></li>
+      </ul>
+    </div>
+    <div class="menu2">
+      <h3>ゲストルーム</h3>
+      <ul>
+        <li><a href="guestroom.html">ゲストルーム</a></li>
+      </ul>
+    </div>
+    <div class="menu3">
+      <h3>ホテル内施設・イベント</h3>
+      <ul>
+        <li><a href="http://graybison4.sakura.ne.jp/">ダイニング</a></li>
+        <li><a href="wedding.html">ウェディング</a></li>
+      </ul>
+    </div>
+    <div class="menu4">
+      <h3>アクティビティ</h3>
+      <ul>
+        <li><a href="activity.html">アクティビティ</a></li>
+      </ul>
+    </div>
+  </div>
+  <small>
+  <p>Copyright &copy; Sci Tec Resort All Right Reserved.</p>
+  </small> </footer>
+</body>
+<!-- InstanceEnd --></html>

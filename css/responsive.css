@@ -1,0 +1,144 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* CSS Document */
+@media screen and (max-width:480px) {
+  
+/* -----------------------
+ 全体構造
+------------------------*/
+ 
+  main {
+  width: auto;
+  float: none;
+  margin-bottom: 60px;
+}
+  
+  
+  .main-image img{
+    height: 300px;
+  }
+  
+/*---------------------
+ ヘッダー
+-----------------------*/
+  
+  
+  /*ハンバーガーボタンのBOX*/
+ header .hamburger-button{
+    display: flex;
+    background-color: transparent;
+    border: 1px solid #fff;
+}
+  
+  /*ハンバーガーメニュー　３本線の色*/
+  header .hamburger-button path{
+    fill: #fff;
+  }
+  
+  /*ボタン内アイコンの縦横比*/
+   header .hamburger-button svg{
+    width: 10px;
+    height: 10px;
+  }
+  
+  /*メニュー表示時の画面サイズ*/
+  header .hamburger-nav {
+    height: 100vh; /*view height(画面いっぱいの表示サイズ)*/
+    background-color: rgba(0,0,0,0.5);
+  }
+  
+  
+/* 
+  header .main-navi {
+    position: static;
+  }
+  header .main-navi ul {
+    overflow: hidden;
+    background-color: var(--main-color);
+  }
+  header .main-navi ul li {
+    margin: 0;
+    width: 25%;
+    
+  }
+  header .main-navi li img {
+    width: 100%;
+    height: auto;
+  }
+*/
+  
+
+  /*---------------------
+　フッター
+-----------------------*/ 
+  
+  footer {
+    height: auto;
+  }
+  
+  footer address {
+   margin-top: 20px;
+}
+  
+  footer p {
+   margin-top: 20px;
+    margin-bottom: 20px;
+}
+  footer br{
+  display: inline;  /*スマホ表示の為の改行処理*/
+}
+
+  
+  
+/*---------------------
+　home-メイン
+-----------------------*/
+
+  .home main figure img{
+    width: 100%;
+  }
+  
+
+/*---------------------
+　学科紹介-メイン
+-----------------------*/
+  
+  .course article{
+    margin: 0 20px;
+    float: none;
+    text-align: center;
+  }
+  
+ .course main section {
+  margin: 0 20px 0px 20px;
+}
+  
+.course main section:last-child {
+  margin-bottom: 20px;
+}
+  
+.course main figure {
+  float: none;
+  margin: 0 0 20px 0;
+}
+  
+.course main h3 {
+  color: var(--main-color);
+  margin-bottom: 20px;
+  font-size: 20px;
+  text-align: left;
+}
+  
+.course main p {
+  margin-left: auto;
+  margin-bottom: 60px;
+  text-align: justify;
+}
+  
+  
+  
+}
+
+
+

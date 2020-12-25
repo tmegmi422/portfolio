@@ -1,0 +1,1105 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+font-family: 'Noto Serif JP', serif;
+  min-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  animation: fadeIn 2s ease 0s 1 normal;
+  -webkit-animation: fadeIn 2s ease 0s 1 normal;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+ #slider{
+  width: 300px;
+  margin:0 auto 30px;
+}
+.slide-item img{
+    width: 100%;
+}
+
+#thumbnail-list{
+  width: 300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap:wrap;
+  list-style-type: none;
+}
+.thumbnail-item{
+  flex: 0 1 30%;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  position:relative;
+  }
+  
+  .thumbnail-current:after{
+    opacity: 0;
+  }
+  img{
+    margin: 0 auto;
+  } 
+
+.book .slider li{
+  list-style-type: none;
+ }
+
+
+/*----------------------
+ヘッダー
+-----------------------*/
+
+header{
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header nav{
+  margin-top: 20px;
+  min-width: 100%;
+  height: 100px;
+}
+
+header nav ul{
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header nav ul li{
+  border-right: solid 1px #999;
+  font-size: 14px;
+  width: 150px;
+  padding: 0 18px 0 0;
+}
+
+header nav ul li:nth-child(5),header nav ul li:nth-child(6){
+  border-right: none;
+}
+
+header h1 img{
+  margin-right: 20px;
+}
+
+header nav ul li a{
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  width: 150px;
+}
+
+
+header nav ul li p{
+  text-align: center;
+  color: #c96;
+}
+
+
+
+
+/*----------------------
+予約
+-----------------------*/
+
+header .book{
+  height: 70px;
+  width: 150px;
+  background-color: #c96;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+header .book a{
+  color: #fff;
+  margin-left: 20px;
+}
+
+
+header .book:hover{
+  background-color: #d9b28c;
+}
+
+
+/*----------------------
+フッター
+-----------------------*/
+
+footer{
+  height: 400px;
+  min-width: 100%;
+  background-color: #1a1a1a;
+  color: #8b8682;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif";
+}
+
+footer img{
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.footer-menu {
+  display: flex;
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.footer-menu .menu1,.menu2,.menu3,.menu4{
+    display: inline-block;
+    margin: 50px auto;
+    text-align: left;
+}
+
+.footer-menu h3{
+  border-bottom: 1px solid #8b8682;
+}
+
+.footer-menu ul{
+  margin-top: 10px;
+  width: 200px;
+	padding:0;
+	list-style-type:none;
+}
+
+
+.footer-menu ul li{
+	padding-left: 20px;
+	line-height: 1.6em;
+	background: url( "../images/footer-list.png") left 0px top 3px no-repeat;
+	background-size: 15px auto;
+}
+
+.footer-menu ul li a{
+  color: #8b8682;
+  text-decoration: none;
+}
+.footer-menu ul li a:hover{
+  text-decoration: underline;
+}
+
+footer p{
+  text-align: center;
+  font-size: 12px;
+  margin-top: 30px;
+}
+
+/*----------------------
+TOP メイン
+-----------------------*/
+
+.home main .main-image img{
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+
+}
+
+.main-image .bx-wrapper {
+ box-shadow: none;
+ border: none;
+ left: 0;
+ background-color: transparent;
+ margin: 0 auto;
+}
+
+
+/*予約フォーム*/
+
+.book-label{
+  height: 100px;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.book-label ul{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  text-align:left;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif";
+  font-size: 10px;
+}
+
+
+.book-label li{
+  list-style: none;
+  margin-right: 20px;
+}
+
+.plan-search{
+  font-size: 16px;
+  font-family: 'Noto Serif JP', serif;
+  line-height: 25px;
+}
+
+
+.book-label input[type="date"]{
+  width: 100%;
+  height: 30px;
+  max-width: 400px;
+  padding: 2.5px;
+  border-radius: 0px;
+  border: 1px solid #000;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.book-label input[type="number"]{
+  width: 60px;
+  height: 30px;
+  max-width: 400px;
+  padding: 5px;
+  border-radius: 0px;
+  border: 1px solid #000;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.search {
+  height: 30px;
+  width: 60px;
+  background-color: #c96;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.search a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 10px;
+  line-height: 30px;
+  width: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search:hover{
+  background-color: #d9b28c;
+}
+
+/*ホテル概要*/
+
+.about-hotel{
+  background-image: url("../images/about-hotel.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center top;
+  min-width: 100%;
+  height: 300px;
+}
+
+.about-hotel section{
+  margin-left: 180px;
+  padding-top: 50px;
+}
+
+
+.about-hotel h3{
+  font-size: 20px;
+  color: #fff;
+  text-align: left;
+  margin-bottom: 40px;
+  text-shadow: 1px 2px 3px black
+}
+
+.about-hotel p{
+  color: #fff;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: left;
+}
+
+
+
+/*TOP-article*/
+
+
+.home article{
+  width: 1060px;
+  background-color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 60px;
+  text-align: center;
+  position: relative;
+}
+
+
+/*TOP-ゲストルーム*/
+
+.hotel-img{
+  display: flex;
+  align-items: center;
+}
+
+.hotel-img img{
+  margin-left: 20px;  
+}
+
+.about-guestroom {
+  position: absolute;
+  top: 20px;
+  left: 600px;
+}
+
+.about-guestroom p{
+  text-align-last: left;
+}
+
+.home article h2{
+  text-align: left;
+  font-weight: normal;
+  font-size: 30px;
+}
+
+.home article h4{
+  text-align: left;
+  margin-bottom: 20px;
+  font-weight: normal;
+  font-size: 12px;
+}
+
+.home article section{
+  color: #c96;
+}
+
+
+.home article section p{
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif"
+}
+
+
+
+/*ゲストルーム-スライドショー*/
+
+.slick01 {
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+ 
+  overflow: hidden;
+  position: relative;
+}
+
+.slide {
+  background-color: #f0e8dd;
+}
+
+.slick01 .prev{
+	position: absolute;
+	top: 150px;
+	bottom: 0;
+	left: 3px;
+	margin: auto;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 7px auto;
+	z-index: 1;
+}
+
+.slick01 .next{
+	position: absolute;
+	top: 150px;
+	bottom: 0;
+	right: 3px;
+	margin: auto;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 7px auto;
+	z-index: 1;
+}
+
+.slick01 i{
+  color: #FFFFFFC7;
+  font-size: 30px;
+}
+
+.slide img{
+  float: left;
+}
+
+.slide section{
+  margin-top: 70px;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif";
+  margin: 70px auto;
+}
+
+.slide h5{
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.slide h6{
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.slide section p{
+  font-size: 14px;
+  text-align: center;
+  line-height: 24px;
+}
+
+
+/*TOP-ダイニング*/
+
+.home .dining{
+  width: 1000px;
+}
+
+
+.home .dining-img {
+  display: flex;
+  align-items: center;
+}
+
+.home .dining-img-left{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  margin-right: 30px;
+}
+
+.home .dining-img-left img{
+  margin-bottom: 20px;
+}
+
+.home .dining-img-right{
+  margin-top: 200px;
+}
+
+
+.home .about-dinning {
+  position: absolute;
+  top: 35px;
+  left: 430px;
+}
+
+.home .about-dinning h3{
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif";
+}
+
+.home .about-dining2 p{
+  position: absolute;
+  top: 570px;
+  left: 130px;
+}
+
+.dining-box{
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+.dining-info img{
+  float: left;
+}
+
+.dining-info section{
+  padding-top: 90px;
+  height: 330px;
+  background-color: #f0e8dd;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif";
+  
+}
+
+.dining-info h5{
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.dining-info h6{
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.dining-info section p{
+  font-size: 14px;
+  text-align: center;
+  line-height: 24px;
+}
+
+
+
+
+
+
+/*TOP-アクティビティ*/
+
+.home .activity-img{
+  display: flex;
+  align-items: center;
+}
+
+.home .activity-img img{
+  margin-left: 20px;  
+}
+
+.home .about-activity{
+  position: absolute;
+  top: 580px;
+  left: 670px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.home .about-activity p{
+  text-align: center;
+}
+
+
+
+/*TOP-ウェディング*/
+
+.home .wedding{
+  width: 100%;
+}
+
+.home .wedding-band{
+  height: 100px;
+  min-width: 100%;
+  background-image: url( "../images/thomas-william-OAVqa8hQvWI-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center top;
+  width: 100%;
+}
+
+.home .wedding-img{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 100px;
+}
+
+.home .wedding-img img{
+   margin: auto 20px;
+}
+
+.home .wedding-img-right{
+  margin-top: 100px;
+}
+
+.home .about-wedding h2{
+  margin-top: 30px;
+  text-align: center;
+}
+
+.home .about-wedding h4{
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.home .about-wedding2 p{
+  margin-top: 50px;
+  text-align: center;
+}
+
+
+/*------------------------
+ゲストルーム
+--------------------------*/
+
+.guest-room .main-image{
+  width: 100%;
+}
+
+.guest-room .inner{
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.page-title hr{
+  width: 200px;
+}
+
+.page-title{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+h2{
+  font-size: 24px;
+  font-weight: lighter;
+}
+
+h4{
+  text-align: center;
+  font-size: 14px;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif";
+  margin-bottom: 40px;
+}
+
+.guestrooms-explain{
+  margin: 40px 0 100px 0;
+  font-size: 16px;
+}
+
+.guest-rooms{
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.guest-rooms article{
+  margin: 0 10px 50px 10px;
+}
+
+.guest-room figure img{
+  margin-bottom: 2px;
+}
+
+.guest-room figure img:hover{
+    opacity: 0.5;
+    transition: .3s;
+}
+
+.guest-rooms article a{
+  color: #806B67;
+  text-decoration: none;
+  
+}
+
+/*ラウンジ*/
+
+.lounge{
+  background-color:#f0ebe4;
+  height: 400px;
+}
+
+.lounge h2{
+  margin: 40px 20px;
+}
+
+.about-lounge{
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-lounge section{
+  text-align: left;
+  font-weight: lighter;
+  line-height: 24px;
+  
+}
+
+.about-lounge p{
+  font-size: 14px;
+  font-family: 'Noto Serif JP', serif;
+  margin-left: 20px;
+}
+
+/*------------------------
+ゲストルーム-部屋詳細
+--------------------------*/
+
+.guestroom-page .bx-wrapper {
+ box-shadow: none;
+ border: none;
+ left: 0;
+ background-color: transparent;
+ margin: 0 auto;
+}
+
+
+.guestroom-page .inner{
+  margin-top: 30px;
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.guestroom-page h2{
+  font-size: 24px;
+  text-align: left;
+  margin-left: 0;
+  margin-bottom: 10px;
+}
+
+.guestroom-page .page-title h2{
+  font-size: 24px;
+  margin: 40px 20px;
+  font-weight: lighter;
+}
+
+.guestroom-page h4{
+  font-size: 14px;
+    text-align: left;
+  margin-bottom: 60px;
+}
+
+.room-introduction p{
+  margin-top: 40px;
+  margin-bottom: 100px;
+  text-align: left;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif";
+  font-size: 14px;
+  line-height: 25px;
+}
+
+.room-overview section p{
+  margin-top: 40px;
+  margin-bottom: 100px;
+  text-align: left;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif";
+  font-size: 14px;
+  line-height: 25px;
+}
+
+
+.room-overview {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
+  margin-bottom: 60px;
+  font-family:  "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif";
+}
+
+.room-overview h3{
+  border-bottom: 1px solid #8b8682;
+  width: 200px;
+  font-size: 16px;
+  text-align: left;
+
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.room-overview ul li{
+  font-size: 13px;
+  text-align: left;
+  line-height: 18px;
+  margin-left: 20px;
+}
+
+
+
+/*-------------------
+ダイニング
+--------------------*/
+
+.dining main{
+  margin: 0 auto;
+  text-align: center;
+  background-color: #cc9966;
+  
+}
+
+.dining .main-image img{
+  width: 100%;
+  min-width: 100%;
+}
+
+.catch{
+  color: #fff;
+  margin: 50px auto;
+  letter-spacing: 10px;
+  font-size: 20px;
+}
+
+.dining article{
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dining article h2{
+  height: 150px;
+  line-height: 150px;
+  font-size: 40px;
+  font-weight: normal;
+  background-image: url( "../images/h2-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+.dining article h3{
+  font-size: 20px;
+  line-height: 35px;
+  font-weight: normal;
+  letter-spacing: 1.7px;
+  margin-bottom: 60px;
+}
+
+.dining article h4{
+  font-weight: normal;
+  letter-spacing: 1.7px;
+  line-height: 24px;
+  margin-top: 40px;
+}
+
+.dining article p{
+  text-align-last: center;
+  line-height: 24px;
+  letter-spacing: 1.7px;
+}
+
+.dining article hr{
+  margin-top: 50px;
+}
+
+
+/*-------------------
+ウェディング
+--------------------*/
+.wedding .main-image img{
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+}
+
+
+.wedding .inner{
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.wedding-explain{
+  margin: 40px 0 30px 0;
+  font-size: 14px;
+}
+
+.wedding-summary{
+  margin: 50px 0 100px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.wedding-summary figcaption{
+  text-align: left;
+}
+
+
+.wedding h3{
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.wedding-summary p{
+  font-size: 12px;
+  line-height: 18px;
+}
+
+
+/*-------------------
+アクティビティ
+--------------------*/
+.activity .main-image img{
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+}
+
+.activity .inner{
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+}
+
+.activity-explain{
+  margin: 40px 0 30px 0;
+  font-size: 14px;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif";
+  font-weight: normal;
+  line-height: 20px;
+}
+
+
+.activity-summary{
+  line-height: 18px;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif";
+  margin: 50px 0 30px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.activity-summary h3{
+  font-size: 16px;
+  margin: 10px auto;
+}
+
+.activity-summary p{
+  font-size: 13px;
+}
+
+
+
+
+/*-------------------
+予約ページ
+--------------------*/
+
+/*予約帯*/
+
+.book .book-label{
+  background-color: #655349;
+  color: #fff;
+}
+
+
+.book .inner{
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif";
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.plan-box{
+  margin:50px auto 100px auto;
+  border: solid 10px #c96;
+  width: 800px;
+  height: 670px;
+  padding: 20px;
+  padding: 30px;
+}
+
+
+.plan-box h2{
+  font-size: 16px;
+  font-weight: bold;
+  text-align: left;
+  margin-left: 0;
+}
+
+.stay-plan{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  margin-top: 20px;
+  
+
+}
+
+.plan-box section{
+  width: 450px;
+  text-align: left;
+  word-wrap: break-word;
+  font-size: 13px;
+  margin: 20px 0 30px 20px;
+  line-height: 20px;
+}
+
+
+.book-plan img{
+  margin-right: 30px;
+}
+
+
+.plan-room {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.book-plan-list{
+  display: flex;
+  font-size: 11px;
+}
+
+.book-plan-list p:first-child{
+  margin-right: 450px;
+}
+.book-bottom{
+  font-size: 11px;
+  text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
